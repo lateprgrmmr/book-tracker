@@ -1,0 +1,14 @@
+.font-link {
+  font-family: "Roboto";
+}
+
+.todo-text {
+  background-color: aliceblue;
+  float: left;
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+.add-button {
+  float: right;
+}
