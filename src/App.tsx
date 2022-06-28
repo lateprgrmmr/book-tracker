@@ -2,6 +2,7 @@ import { Grid, Paper } from '@mui/material';
 import React, { useState } from 'react';
 import { TodoList } from './TodoList';
 import { AddTodoForm } from './AddTodoForm';
+import { ResponsiveAppBar } from './Header';
 
 
 let initialTodos: Todo[] = [];
@@ -28,24 +29,27 @@ function App() {
   };
 
   return (
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      justifyItems="center"
-      style={{ minHeight: '400px' }}
-    >
-      <Paper
-        className='main-container'
-        elevation={6}
+    <>
+      <ResponsiveAppBar />
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justifyItems="center"
+        style={{ minHeight: '400px' }}
       >
-        <>
-          <TodoList todos={todos} toggleTodo={toggleTodo} />
-          <AddTodoForm addTodo={addTodo} />
-        </>
-      </Paper>
-    </Grid>
+        <Paper
+          className='main-container'
+          elevation={6}
+        >
+          <>
+            <TodoList todos={todos} toggleTodo={toggleTodo} />
+            <AddTodoForm addTodo={addTodo} />
+          </>
+        </Paper>
+      </Grid>
+    </>
   );
 }
 
